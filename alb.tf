@@ -15,7 +15,7 @@ resource "aws_lb" "alb" {
 
 resource "aws_lb_listener" "alb_listener_frontend" {
   load_balancer_arn = aws_lb.alb.arn
-  port              = 5000
+  port              = "5000"
   protocol          = "HTTP"
 
   default_action {
@@ -41,7 +41,7 @@ resource "aws_lb_target_group_attachment" "tg_attach_frontend" {
 
 resource "aws_lb_listener" "alb_listener_backend" {
   load_balancer_arn = aws_lb.alb.arn
-  port              = 5001
+  port              = "5001"
   protocol          = "HTTP"
 
   default_action {
