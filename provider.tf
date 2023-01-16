@@ -4,7 +4,7 @@ provider "aws" {
 
 terraform {
   backend "s3" {
-    bucket = "olek-lagierski-panda-devops-11"
+    bucket = "olek-lagierski-panda-devops-core-11"
     key    = "infra/terraform.state"
     region = "us-east-1"
   }
